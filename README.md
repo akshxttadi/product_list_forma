@@ -1,25 +1,38 @@
 # Forma Product Showcase
 
-A responsive React storefront powered by Redux Toolkit. Product data comes from the DummyJSON products API by default.
+A responsive React storefront powered by Redux Toolkit. Product data is loaded from the DummyJSON products API by default.
 
-New to the project? Start with [PROJECT_GUIDE.md](./PROJECT_GUIDE.md) for a plain-language tour of every file and page.
+[Open the live site](https://product-list-forma.vercel.app) · [Read the project guide](./PROJECT_GUIDE.md)
+
+## Features
+
+- Browse products, categories, and product details
+- Search the catalog
+- Add items to the shopping bag and try the demo checkout
+- Submit feedback, saved in the current browser's local storage
 
 ## Run locally
 
-1. Install dependencies with `npm install`.
-2. Copy `.env.example` to `.env` if you want to set a different API base URL.
-3. Start the app with `npm run dev`.
+```sh
+npm install
+npm run dev
+```
 
-Run the built-in API and Redux checks with `npm test`.
+To use a different API origin, copy `.env.example` to `.env` and set `VITE_API_BASE_URL`. The API must support these routes:
 
-Set `VITE_API_BASE_URL` to the origin of an API that supports the same product routes:
+| Method | Route | Purpose |
+| --- | --- | --- |
+| `GET` | `/products` | Product list and metadata |
+| `GET` | `/products/:id` | Product details |
+| `GET` | `/products/search?q=:query` | Search products |
+| `GET` | `/products/category-list` | Category list |
+| `GET` | `/products/category/:slug` | Products in a category |
 
-- `GET /products` - product list and metadata
-- `GET /products/:id` - product details
-- `GET /products/search?q=:query` - server side product search
-- `GET /products/category-list` - categories
-- `GET /products/category/:slug` - products in a category
+## Useful commands
 
-The feedback form saves submitted notes in the current browser's local storage.
-"# product_list_forma" 
-"# product_list_forma" 
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm test` | Run the API and Redux checks |
+| `npm run build` | Build the app for deployment |
+| `npm run preview` | Preview the production build locally |
