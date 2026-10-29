@@ -4,6 +4,8 @@ A responsive React storefront powered by Redux Toolkit. Product data comes from 
 
 New to the project? Start with [PROJECT_GUIDE.md](./PROJECT_GUIDE.md) for a plain-language tour of every file and page.
 
+https://product-list-forma.vercel.app/
+
 ## Run locally
 
 1. Install dependencies with `npm install`.
