@@ -11,6 +11,8 @@ A responsive React storefront powered by Redux Toolkit. Product data is loaded f
 - Add items to the shopping bag and try the demo checkout
 - Submit feedback, saved in the current browser's local storage
 
+https://product-list-forma.vercel.app/
+
 ## Run locally
 
 ```sh
