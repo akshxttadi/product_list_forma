@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Keep README.md, but leave other Markdown notes out of the GitHub upload.
+*.md
+!README.md
